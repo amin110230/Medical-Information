@@ -170,7 +170,7 @@ insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`
 --
 ALTER TABLE `institutions`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `district_id_id` (`district_id`);
+  ADD KEY `district_id` (`district_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
