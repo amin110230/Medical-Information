@@ -20,8 +20,24 @@ public class Institution {
     @Column(name="name")
     private String name;
 
-    @Column(name="bn_name")
-    private String bnName;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "district_id")
+    private District district;
+
+    @Column(name="acronym")
+    private String acronym;
+
+    @Column(name="university")
+    private String university;
+
+    @Column(name="established")
+    private int established;
+
+    @Column(name="started")
+    private int started;
+
+    @Column(name="enroll")
+    private int enroll;
 
     @Column(name="url")
     private String url;
