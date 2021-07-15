@@ -11,27 +11,21 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="districts")
-public class District {
+@Table(name="upazilas")
+public class Upazila {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "division_id")
-    private Division division;
+    @JoinColumn(name = "district_id")
+    private District district;
 
     @Column(name="name")
     private String name;
 
     @Column(name="bn_name")
     private String bnName;
-
-    @Column(name="lat")
-    private String lat;
-
-    @Column(name="lon")
-    private String lon;
 
     @Column(name="url")
     private String url;
