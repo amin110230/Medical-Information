@@ -1,0 +1,1 @@
+export const jbrowseUrl = process.env.REACT_APP_URL_JBROWSE;
