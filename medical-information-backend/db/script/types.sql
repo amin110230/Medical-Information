@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2019 at 09:44 AM
+-- Generation Time: Nov 24, 2019 at 09:42 AM
 -- Server version: 5.7.26-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.1
 
@@ -25,31 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `degrees`
+-- Table structure for table `types`
 --
 
-create table `degrees` (
-	`id` int (11)  NOT NULL,
-	`name` varchar (50)  NOT NULL,
-	`abbreviation` varchar (150)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `types` (
+  `id` int(1) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `bn_name` varchar(25) NOT NULL,
+  `description` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `degrees`
+-- Dumping data for table `types`
 --
 
-insert into `degrees` (`id`, `name`, `abbreviation`) values(1,'MBBS','Bachelor of Medicine', 'Bachelor of Surgery');
-insert into `degrees` (`id`, `name`, `abbreviation`) values(2,'MD','Doctor of Medicine');
-insert into `degrees` (`id`, `name`, `abbreviation`) values(3,'MS','Master of Surgery');
+INSERT INTO `types` (`id`, `name`, `bn_name`, `description`) VALUES
+(1, 'Government', 'সরকারি', 'Government Description'),
+(2, 'Military', 'মিলিটারি', 'Military Description'),
+(3, 'Private', 'বেসরকারি', 'Private Description');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `degrees`
+-- Indexes for table `types`
 --
-ALTER TABLE `degrees`
+ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,22 +59,12 @@ ALTER TABLE `degrees`
 --
 
 --
--- AUTO_INCREMENT for table `degrees`
+-- AUTO_INCREMENT for table `types`
 --
-ALTER TABLE `degrees`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `institutions`
---
-
+ALTER TABLE `types`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
