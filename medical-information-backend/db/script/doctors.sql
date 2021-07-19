@@ -25,31 +25,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `degrees`
+-- Table structure for table `doctors`
 --
 
-create table `degrees` (
+create table `doctors` (
 	`id` int (11)  NOT NULL,
-	`name` varchar (50)  NOT NULL,
-	`abbreviation` varchar (150)
+	`name` varchar (100)  NOT NULL,
+	`bmdc_no` varchar (100),
+	`phone` varchar (100),
+	`email` VARCHAR(40),
+	`address` TEXT,
+	`started` int (4),
+    `district_id` int (2),
+    `image` LONGBLOB,
+    `description` TEXT,
+    `active` BIT(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `degrees`
+-- Dumping data for table `doctors`
 --
 
-insert into `degrees` (`id`, `name`, `abbreviation`) values(1,'MBBS','Bachelor of Medicine', 'Bachelor of Surgery');
-insert into `degrees` (`id`, `name`, `abbreviation`) values(2,'MD','Doctor of Medicine');
-insert into `degrees` (`id`, `name`, `abbreviation`) values(3,'MS','Master of Surgery');
+INSERT INTO `doctors` (`id`, `name`, `bmdc_no`, `phone`, `email`, `address`, `started`, `district_id`, `image`, `description`, `active`) VALUES
+(1,'Dr x','123456', '01711123456', 'doctor@gmail.com', 'Dhaka', 2000, 1, null, 'Description', '');
+-- insert into `doctors` (`id`, `name`, `abbreviation`) values(2,'MD','Doctor of Medicine');
+-- insert into `doctors` (`id`, `name`, `abbreviation`) values(3,'MS','Master of Surgery');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `degrees`
+-- Indexes for table `doctors`
 --
-ALTER TABLE `degrees`
+ALTER TABLE `doctors`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +66,10 @@ ALTER TABLE `degrees`
 --
 
 --
--- AUTO_INCREMENT for table `degrees`
+-- AUTO_INCREMENT for table `doctors`
 --
-ALTER TABLE `degrees`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `doctors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -69,7 +78,8 @@ ALTER TABLE `degrees`
 --
 -- Constraints for table `institutions`
 --
-
+ALTER TABLE `doctors`
+  ADD CONSTRAINT `doctors_ibfk_2` FOREIGN KEY (`district_id`) REFERENCES `districts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
