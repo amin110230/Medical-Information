@@ -3,6 +3,7 @@ package com.ciphertext.medicalinformationbackend.iservice;
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.Hospital;
 import com.ciphertext.medicalinformationbackend.model.Institution;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -12,4 +13,7 @@ import java.util.List;
 public interface HospitalService {
     List<Hospital> getAllHospitals();
     Hospital getHospitalById(int id) throws RecordNotFoundException;
+    Hospital createHospital(Hospital hospital);
+    Hospital updateHospital(Hospital newHospital, int hospitalId);
+    ResponseEntity<Object> deleteHospitalById(int hospitalId);
 }

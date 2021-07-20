@@ -1,5 +1,6 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name="hospitals")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +27,5 @@ public class Hospital {
     private District district;
 
     @Column(name="number_of_bed")
-    private String numberOfBed;
+    private int numberOfBed;
 }
