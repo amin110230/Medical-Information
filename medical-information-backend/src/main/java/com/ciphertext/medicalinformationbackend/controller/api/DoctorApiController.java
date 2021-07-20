@@ -1,8 +1,10 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
-import com.ciphertext.medicalinformationbackend.iservice.HospitalService;
-import com.ciphertext.medicalinformationbackend.model.Hospital;
+import com.ciphertext.medicalinformationbackend.iservice.DoctorService;
+import com.ciphertext.medicalinformationbackend.model.Doctor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -18,19 +20,22 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api")
-public class HospitalController {
-    @Autowired
-    HospitalService service;
+public class DoctorApiController {
 
-    @GetMapping("/hospitals")
-    public List<Hospital> getAllDivisions(Model model) {
-        return service.getAllHospitals();
+    private static final Logger logger = LoggerFactory.getLogger(DoctorApiController.class);
+
+    @Autowired
+    DoctorService service;
+
+    @GetMapping("/doctors")
+    public List<Doctor> getAllDoctors(Model model) {
+        return service.getAllDoctors();
     }
 
-    @GetMapping("/hospitals/{id}")
-    public ResponseEntity<Hospital> getDivisionById(@PathVariable(value = "id") int hospitalId)
+    @GetMapping("/doctors/{id}")
+    public ResponseEntity<Doctor> getDoctorById(@PathVariable(value = "id") int doctorId)
             throws RecordNotFoundException {
-        Hospital hospital = service.getHospitalById(hospitalId);
-        return ResponseEntity.ok().body(hospital);
+        Doctor doctor = service.getDoctorById(doctorId);
+        return ResponseEntity.ok().body(doctor);
     }
 }
