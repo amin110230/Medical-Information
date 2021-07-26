@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name="hospitals")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +24,10 @@ public class Hospital {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "district_id")
     private District district;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "type_id")
+    private Type type;
 
     @Column(name="number_of_bed")
     private int numberOfBed;

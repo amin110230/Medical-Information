@@ -66,7 +66,7 @@ public class HospitalApiControllerTests {
     public void testCreateHospital() {
         Hospital hospital = new Hospital();
         hospital.setName("Test");
-        hospital.setNumberOfBed(10000);
+        hospital.setNumberOfBed(100);
         District district = districtRepository.getById(1);
         hospital.setDistrict(district);
 
@@ -78,21 +78,23 @@ public class HospitalApiControllerTests {
     /**
      * Here we test that we can update a car's information using the PUT method
      */
-//    @Test
-//    public void testUpdateCar() {
-//        int id = 1;
-//        Car car = restTemplate.getForObject(getRootUrl() + "/cars/" + id, Car.class);
-//        car.setCarName("Tesla");
-//        car.setDoors(2);
-//
-//        restTemplate.put(getRootUrl() + "/cars/" + id, car);
-//
-//        Car updatedCar = restTemplate.getForObject(getRootUrl() + "/cars/" + id, Car.class);
-//        Assert.assertNotNull(updatedCar);
-//    }
+    @Test
+    public void testUpdateHospital() {
+        int id = 78;
+        Hospital hospital = restTemplate.getForObject(getRootUrl() + "/hospitals/" + id, Hospital.class);
+        hospital.setName("Tesla");
+        District district = districtRepository.getById(1);
+        hospital.setDistrict(district);
+        hospital.setNumberOfBed(50);
+
+        restTemplate.put(getRootUrl() + "/hospitals/edit/" + id, hospital);
+
+        Hospital updatedHospital = restTemplate.getForObject(getRootUrl() + "/hospitals/" + id, Hospital.class);
+        Assert.assertNotNull(updatedHospital);
+    }
 
     /**
-     * Here we test that we can delete a car by using the DELETE method,
+     * Here we test that we can delete a hospital by using the DELETE method,
      * then we verify that it no longer exists in the database
      */
     @Test
