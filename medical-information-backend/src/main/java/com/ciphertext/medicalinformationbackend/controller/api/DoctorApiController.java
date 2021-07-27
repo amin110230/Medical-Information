@@ -1,5 +1,6 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
+import com.ciphertext.medicalinformationbackend.dto.out.DoctorDTO;
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DoctorService;
 import com.ciphertext.medicalinformationbackend.model.Doctor;
@@ -28,7 +29,7 @@ public class DoctorApiController {
     DoctorService service;
 
     @GetMapping("/doctors")
-    public List<Doctor> getAllDoctors(Model model) {
+    public List<DoctorDTO> getAllDoctors(Model model) {
         return service.getAllDoctors();
     }
 

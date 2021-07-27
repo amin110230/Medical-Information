@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Prof. Wahiuddin Mahmood",
+        "yearOfExperience": 15,
+        "specialities": "Anesthesiology",
+        "degrees": "MBBS FCPS",
+        "description": "Prof. Wahiuddin Mahmood graduated from Chittagong Medical College in 1983. After his internship he worked as Resident Anesthesiologist at IPGMR (BSMMU) and obtained DA (Diploma in Anesthesiology) from the same institute under University of Dhaka in 1990. Prof. Wahiuddin completed his fellowship FCPS (Anesthesiology) from Bangladesh College of Physicians and Surgeons (BCPS). Prof. Wahiuddin joined Dhaka Medical College as Resident Anesthesiologist. Later he worked in SSMCH as a Jr. Consultant, Anesthesiology and then as Assistant Professor and Associate Professor of Dhaka Medical College. He performed Shaheed Suhrawardy Hospital as Professor. He obtained advanced training in Alternative Fluid Therapy (Korea) and attended international congresses periodically across the world. Prof. Wahiuddin is trained in latest advancement on Critical Care Management & ICU, organized by Sriraj Hospital, Mahidol University, Bangkok, Thailand. Experience: More than 20 years",
+        "image": null
+    },
+    {
+        "id": 2,
+        "name": "Dr. Shah Muhammad Ali",
+        "yearOfExperience": 15,
+        "specialities": "Anesthesiology",
+        "degrees": "MBBS FCPS",
+        "description": "Dr. Shah Muhammad Ali graduated from Sir Salimullah Medical College & Mitford Hospital in 1982. After his internship, he worked as medical officer in The Islamic Republic of Iran for four years. After coming back in 1988, he joined in Holy Family Red Crescent Medical College Hospital in the department of Anesthesiology. He obtained advanced specialized training from the Institute of Post Graduate Medicine & Research (IPGMR) and completed his Diploma in Anesthesiology in 1991 and FCPS in 1993. Dr. Shah Muhammad Ali became a Consultant in the year 1994 in Holy Family Red Crescent Medical College Hospital and later he worked as Senior Consultant & Associate Professor of Anesthesiology & the Head of the Department of Intensive Care Medicine from the year 2001. He was also an examiner of BCPS and Instructor in Nepal and Philippines for a USAID sponsored course on hospital management, emergencies and disaster management. He is working Square Hospital as Senior Consultant, Anesthesiology. Experience: More than 25 years",
+        "image": null
+    },
+    {
+        "id": 3,
+        "name": "Dr. Tahmina Banu",
+        "yearOfExperience": 15,
+        "specialities": "Anesthesiology",
+        "degrees": "MBBS FCPS",
+        "description": "Dr. Tahmina Banu MBBS, DA, MD is a medical graduate from Dhaka Medical College. After completion of her internship she started her carrier and served various capacities for last 13 years across the country. She has achieved advanced training on Regional Anesthesia and Intensive Care Management and is well trained in anesthesia for neuro-surgical cases as well. She also worked as a member of Renal Transplant Team.",
+        "image": null
+    },
+    {
+        "id": 4,
+        "name": "Dr. Bhabesh Chandra Mondal",
+        "yearOfExperience": 15,
+        "specialities": "Anesthesiology",
+        "degrees": "MBBS FCPS",
+        "description": "Dr. Bhabesh Chandra Mondal graduated from Sir Salimullah Medical College in 1992. After his internship he worked as Honorary Resident Anesthetist in Mitford Hospital. As medical officer he joined BIRDEM in 1996, completed Diploma in Anesthesiology (DA) and then appointed as Registrar, Anesthesiology. In 2004, Dr. Bhabesh obtained his fellowship (FCPS) in Anesthesia from the Bangladesh College of Physicians and Surgeons (BCPS). Dr. Bhabesh worked as Jr. Consultant then as Assistant Professor of Anesthesiology in Ibrahim Medical College & BIRDEM. He also worked in Ibrahim Cardiac Hospital & Research Institute in the department of Cardiac Anesthesiology & Surgical ICU as Registrar and Junior Consultant till February, 2010. He published scientific articles in different journals. He joins Square Hospital as Consultant, Cardiac Anesthesiology. Experience: More than 15 years",
+        "image": null
+    },
+    {
+        "id": 5,
+        "name": "Dr. Ranadhir Kumar Kundu",
+        "yearOfExperience": 15,
+        "specialities": "Anesthesiology",
+        "degrees": "MBBS FCPS",
+        "description": "Dr. Ranadhir Kumar Kundu graduated from Sher-e-Bangla Medical College, Barisal in 1985. After completion of internship he worked as medical officer in different government hospitals in Bangladesh. In 1995 he was appointed as Lecturer of Anatomy at Faridpur Medical College. Afterwards, he worked at BSMMU, Sir Salimullah Medical College Hospital and Dhaka Medical College Hospital. After achieving MD degree from BSMMU in 2004, Dr. Ranadhir worked as Registrar in Cardiac Anesthesia at National Institute of Cardiovascular Diseases and Hospital (NICVD), Dhaka till 2007 and conducted a good number of cardiac anesthesias both open and closed heart surgery. He executed neuroanesthesia for all sorts of routine and emergency neurosurgical and neurotrauma patients from the age of day one to ninety years old with multiple co-morbidities. ? Dr. Ranadhir Kumar participated in different international & national conferences and seminars of anesthesia and critical care at home & abroad. He published several scientific articles in different scientific journals. He is the member of BSA and BSSP. His working area of interest is in Neuro-anesthesia and Neuro ICU.",
+        "image": null
+    }
+]
