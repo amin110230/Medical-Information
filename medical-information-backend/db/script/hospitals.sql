@@ -29,11 +29,13 @@ SET time_zone = "+00:00";
 --
 
 create table `hospitals` (
-	`id` int (11),
-	`name` varchar (135),
+	`id` int (11) NOT NULL,
+	`name` varchar (200) NOT NULL,
 	`number_of_bed` int (11),
-	`district_id` int(2),
-	`type_id` int(2)
+	`upazila_id` int(3),
+	`district_id` int(2) NOT NULL,
+	`type_id` int(2) NOT NULL
+	`url` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -128,7 +130,8 @@ insert into `hospitals` (`id`, `name`, `number_of_bed`, `district_id`, `type_id`
 --
 ALTER TABLE `hospitals`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `district_id` (`district_id`);
+  ADD KEY `upazila_id` (`upazila_id`),
+  ADD KEY `district_id` (`district_id`),
   ADD KEY `type_id` (`type_id`);
 
 --
@@ -149,6 +152,7 @@ ALTER TABLE `hospitals`
 -- Constraints for table `hospitals`
 --
 ALTER TABLE `hospitals`
+ADD CONSTRAINT `hospitals_fk_upazilas` FOREIGN KEY (`upazila_id`) REFERENCES `upazilas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
   ADD CONSTRAINT `hospitals_fk_districts` FOREIGN KEY (`district_id`) REFERENCES `districts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
   ADD CONSTRAINT `hospitals_fk_types` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
