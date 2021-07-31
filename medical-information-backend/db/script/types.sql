@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `types` (
-  `id` int(1) NOT NULL,
+  `id` int(2) NOT NULL,
   `name` varchar(25) NOT NULL,
   `bn_name` varchar(25) NOT NULL,
   `description` varchar(200) NOT NULL
@@ -62,7 +62,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT for table `types`
 --
 ALTER TABLE `types`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

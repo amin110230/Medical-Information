@@ -564,7 +564,7 @@ ALTER TABLE `hospitals`
 -- AUTO_INCREMENT for table `hospitals`
 --
 ALTER TABLE `hospitals`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=498;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=498;
 
 --
 -- Constraints for dumped tables

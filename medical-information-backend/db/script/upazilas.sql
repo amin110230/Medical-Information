@@ -561,8 +561,7 @@ ALTER TABLE `upazilas`
 --
 -- Constraints for table `upazilas`
 --
-ALTER TABLE `upazilas`
-  ADD CONSTRAINT `upazilas_ibfk_2` FOREIGN KEY (`district_id`) REFERENCES `districts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `upazilas` ADD CONSTRAINT `upazilas_fk_districts` FOREIGN KEY (`district_id`) REFERENCES `districts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
