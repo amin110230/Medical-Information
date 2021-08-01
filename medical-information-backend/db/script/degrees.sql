@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 create table `degrees` (
-	`id` int (11)  NOT NULL,
+	`id` int (3)  NOT NULL,
 	`name` varchar (50)  NOT NULL,
 	`abbreviation` varchar (150)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -38,7 +38,7 @@ create table `degrees` (
 -- Dumping data for table `degrees`
 --
 
-insert into `degrees` (`id`, `name`, `abbreviation`) values(1,'MBBS','Bachelor of Medicine', 'Bachelor of Surgery');
+insert into `degrees` (`id`, `name`, `abbreviation`) values(1,'MBBS','Bachelor of Medicine, Bachelor of Surgery');
 insert into `degrees` (`id`, `name`, `abbreviation`) values(2,'MD','Doctor of Medicine');
 insert into `degrees` (`id`, `name`, `abbreviation`) values(3,'MS','Master of Surgery');
 

@@ -1,10 +1,10 @@
 package com.ciphertext.medicalinformationbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * @author Sadman
@@ -12,23 +12,23 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="hospitals")
-public class Hospital {
+@Table(name="time-slots")
+public class TimeSlot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="name")
-    private String name;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "doctor_workplace_id")
+    private DoctorWorkplace doctorWorkplace;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "district_id")
-    private District district;
+    @JoinColumn(name = "day_id")
+    private Day day;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "type_id")
-    private Type type;
+    @Column(name = "start_datetime")
+    private Date startDateTime;
 
-    @Column(name="number_of_bed")
-    private int numberOfBed;
+    @Column(name = "end_datetime")
+    private Date endDateTime;
 }
