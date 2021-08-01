@@ -33,7 +33,7 @@ create table `hospitals` (
 	`name` varchar (135),
 	`number_of_bed` int (11),
 	`district_id` int(2)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `hospitals`

@@ -36,7 +36,7 @@ CREATE TABLE `districts` (
   `lat` varchar(15) DEFAULT NULL,
   `lon` varchar(15) DEFAULT NULL,
   `url` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `districts`

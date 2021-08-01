@@ -32,7 +32,7 @@ create table `degrees` (
 	`id` int (11)  NOT NULL,
 	`name` varchar (50)  NOT NULL,
 	`abbreviation` varchar (150)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `degrees`

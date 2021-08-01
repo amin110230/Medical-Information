@@ -40,7 +40,7 @@ create table `doctors` (
     `image` LONGBLOB,
     `description` TEXT,
     `active` BIT(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `doctors`

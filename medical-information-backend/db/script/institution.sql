@@ -38,7 +38,7 @@ create table `institutions` (
 	`enroll` int (50) NOT NULL,
 	`district_id` int (50) NOT NULL,
 	`url` varchar (150)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `institutions`
@@ -60,7 +60,7 @@ insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('14','M Abdur Rahim Medical College[18]','MARMC','RU','1992','1992','180','54',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('15','Pabna Medical College[19]','PMC','RU','2008','2008','70','13',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('16','Abdul Malek Ukil Medical College[20]','AMUMC','CU','2008','2008','70','5',NULL);
-insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('17','Cox\'s Bazar Medical College[21]','CoxMC','CU','2008','2008','70','9',NULL);
+insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('17','Coxs Bazar Medical College[21]','CoxMC','CU','2008','2008','70','9',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('18','Jashore Medical College[22]','JMC','RU','2010','2010','70','20',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('19','Satkhira Medical College[23]','SMC','RU','2011','2011','65','21',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('20','Shahid Syed Nazrul Islam Medical College[24]','SSNIMC','DU','2011','2011','65','45',NULL);
@@ -99,10 +99,10 @@ insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('53','Ibn Sina Medical College[51]','ISMC','DU','1995','2005','65','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('54','Shahabuddin Medical College[52]','SMC','DU','2003','2003','90','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('55','Medical College for Women & Hospital[53]','MCW','DU','1992','1992','90','47',NULL);
-insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('56','Z. H. Sikder Women\'s Medical College[54]','ZHSWMC','DU','1992','1992','100','47',NULL);
-insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('57','Kumudini Women\'s Medical College[55]','KWMC','DU','2001','2001','120','44',NULL);
+insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('56','Z. H. Sikder Womens Medical College[54]','ZHSWMC','DU','1992','1992','100','47',NULL);
+insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('57','Kumudini Womens Medical College[55]','KWMC','DU','2001','2001','120','44',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('58','Tairunnessa Memorial Medical College[56]','TMMC','DU','1992','1992','100','41',NULL);
-insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('59','Ad-din Women\'s Medical College[57]','AWMC','DU','2008','2008','95','47',NULL);
+insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('59','Ad-din Womens Medical College[57]','AWMC','DU','2008','2008','95','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('60','International Medical College[58]','IMC','DU','2000','2000','120','41',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('61','Central Medical College[59]','CEMEC','CU','2005','2005','75','1',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('62','B.G.C Trust Medical College[60]','BGCTMC','CU','2002','2002','100','8',NULL);
@@ -127,7 +127,7 @@ insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('81','Green Life Medical College[79]','GMCH','DU','2010','2010','100','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('82','Dhaka Community Medical College[80]','DCMC','DU','2008','2008','100','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('83','Northern Private Medical College[81]','NPMC','RU','2001','2001','70','59',NULL);
-insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('84','Sylhet Women\'s Medical College[82]','SWMC','SUST','2005','2005','100','36',NULL);
+insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('84','Sylhet Womens Medical College[82]','SWMC','SUST','2005','2005','100','36',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('85','Monno Medical College[83]','MoMC','DU','2002','2002','80','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('86','MH Samorita Medical College[84]','MHSMC','DU','2010','2010','110','47',NULL);
 insert into `institutions` (`id`, `name`, `acronym`, `university`, `established`, `started`, `enroll`, `district_id`, `url`) values('87','City Medical College[85]','CiMC','DU','2011','2011','80','41',NULL);
