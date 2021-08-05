@@ -33,8 +33,8 @@ CREATE TABLE `districts` (
   `division_id` int(1) NOT NULL,
   `name` varchar(25) NOT NULL,
   `bn_name` varchar(25) NOT NULL,
-  `lat` varchar(15) DEFAULT NULL,
-  `lon` varchar(15) DEFAULT NULL,
+  `lat` varchar(20) DEFAULT NULL,
+  `lon` varchar(20) DEFAULT NULL,
   `url` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

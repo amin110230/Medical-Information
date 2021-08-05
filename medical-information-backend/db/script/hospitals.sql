@@ -35,8 +35,8 @@ create table `hospitals` (
 	`upazila_id` int(3),
 	`district_id` int(2) NOT NULL,
 	`type_id` int(2) NOT NULL,
-	`lat` varchar(15),
-    `lon` varchar(15),
+	`lat` varchar(20),
+    `lon` varchar(20),
 	`url` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
