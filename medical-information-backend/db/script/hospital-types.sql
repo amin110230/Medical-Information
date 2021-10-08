@@ -30,13 +30,22 @@ CREATE TABLE `hospital-types` (
 -- Dumping data for table `hospital-types`
 --
 
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('1','Chest Disease','বক্ষব্যাধি','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('2','College','কলেজ','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('3','District','জেলা','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('4','Specialized','বিশেষায়িত','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('5','Trauma','ট্রমা','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('6','University','বিশ্ববিদ্যালয়','description needed');
-insert into `hospital-types` (`id`, `name`, `bn_name`, `description`) values('7','Upazila','উপজেলা','description needed');
+insert  into `hospital-types`(`id`,`name`,`bn_name`,`description`) values
+(1,'Cancer','ক্যান্সার','description needed'),
+(2,'Chest Disease','বক্ষব্যাধি ','description needed'),
+(3,'College','কলেজ','description needed'),
+(4,'Dental','ডেন্টাল','description needed'),
+(5,'District','জেলা','description needed'),
+(6,'Eye','চোখ','description needed'),
+(7,'Infectious Disease','সংক্রামক ব্যাধি','description needed'),
+(8,'Kidney','কিডনি','description needed'),
+(9,'Leprosy','কুষ্ঠ','description needed'),
+(10,'Mental','মানসিক','description needed'),
+(11,'Mother and Child','মা ও শিশু ','description needed'),
+(12,'Specialized','বিশেষায়িত','description needed'),
+(13,'Trauma',' ট্রমা ','description needed'),
+(14,'University','বিশ্ববিদ্যালয়','description needed'),
+(15,'Upazila','উপজেলা ','description needed');
 
 --
 -- Indexes for dumped tables
@@ -56,7 +65,7 @@ ALTER TABLE `hospital-types`
 -- AUTO_INCREMENT for table `hospital-types`
 --
 ALTER TABLE `hospital-types`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
