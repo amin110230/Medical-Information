@@ -9,9 +9,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { DoctorComponent } from './components/doctor/doctor.component';
+import {FormControl} from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, DoctorComponent],
@@ -23,10 +26,13 @@ import { DoctorComponent } from './components/doctor/doctor.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
+    MatTableModule,
+    MatSelectModule,
     FormsModule,
-    FlexLayoutModule,
+    FormControl,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
