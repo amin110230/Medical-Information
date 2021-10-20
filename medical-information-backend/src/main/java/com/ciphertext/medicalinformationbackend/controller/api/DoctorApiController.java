@@ -20,7 +20,7 @@ import java.util.List;
  * @author Sadman
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class DoctorApiController {
 
     private static final Logger logger = LoggerFactory.getLogger(DoctorApiController.class);

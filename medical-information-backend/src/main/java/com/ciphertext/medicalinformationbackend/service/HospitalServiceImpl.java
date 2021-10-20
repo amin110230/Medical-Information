@@ -1,7 +1,10 @@
 package com.ciphertext.medicalinformationbackend.service;
 
+import com.ciphertext.medicalinformationbackend.dto.out.DoctorDTO;
+import com.ciphertext.medicalinformationbackend.dto.out.HospitalDTO;
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.HospitalService;
+import com.ciphertext.medicalinformationbackend.model.Doctor;
 import com.ciphertext.medicalinformationbackend.model.Hospital;
 import com.ciphertext.medicalinformationbackend.repository.HospitalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,8 +27,19 @@ public class HospitalServiceImpl implements HospitalService {
     HospitalRepository hospitalRepository;
 
     @Override
-    public List<Hospital> getAllHospitals() {
-        return hospitalRepository.findAll();
+    public List<HospitalDTO> getAllHospitals() {
+        List<Hospital> hospitals = hospitalRepository.findAll();
+        List<HospitalDTO> hospitalDTOS= new ArrayList<>();
+        for(Hospital hospital: hospitals){
+            HospitalDTO hospitalDTO = new HospitalDTO();
+            hospitalDTO.setId(hospital.getId());
+            hospitalDTO.setName(hospital.getName());
+            hospitalDTO.setDistrict(hospital.getDistrict().getName());
+            hospitalDTO.setType(hospital.getType().getName());
+            hospitalDTO.setNumberOfBed(hospital.getNumberOfBed());
+            hospitalDTOS.add(hospitalDTO);
+        }
+        return hospitalDTOS;
     }
 
     @Override
