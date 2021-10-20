@@ -1,5 +1,6 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
+import com.ciphertext.medicalinformationbackend.dto.out.HospitalDTO;
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.HospitalService;
 import com.ciphertext.medicalinformationbackend.model.Hospital;
@@ -15,13 +16,13 @@ import java.util.List;
  * @author Sadman
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class HospitalApiController {
     @Autowired
     HospitalService service;
 
     @GetMapping("/hospitals")
-    public List<Hospital> getAllHospitals(Model model) {
+    public List<HospitalDTO> getAllHospitals(Model model) {
         return service.getAllHospitals();
     }
 
