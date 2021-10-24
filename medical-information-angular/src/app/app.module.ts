@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     MatButtonModule,
     MatIconModule,
+    MatSidenavModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     AppRoutingModule,
