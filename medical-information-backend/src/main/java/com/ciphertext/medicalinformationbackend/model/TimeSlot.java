@@ -1,9 +1,11 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import com.ciphertext.medicalinformationbackend.enums.DaysOfWeek;
+import com.ciphertext.medicalinformationbackend.enums.DegreeType;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 /**
@@ -12,7 +14,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name="time-slots")
+@Table(name="time_slot")
 public class TimeSlot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +24,9 @@ public class TimeSlot {
     @JoinColumn(name = "doctor_workplace_id")
     private DoctorWorkplace doctorWorkplace;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "day_id")
-    private Day day;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "degree_type")
+    private DaysOfWeek daysOfWeek;
 
     @Column(name = "start_datetime")
     private Date startDateTime;

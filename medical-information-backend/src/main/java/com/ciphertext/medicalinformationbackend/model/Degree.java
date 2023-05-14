@@ -1,9 +1,10 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import com.ciphertext.medicalinformationbackend.enums.DegreeType;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author Sadman
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="degrees")
+@Table(name="degree")
 public class Degree {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +23,8 @@ public class Degree {
 
     @Column(name="abbreviation")
     private String abbreviation;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "degree_type")
+    private DegreeType degreeType;
 }

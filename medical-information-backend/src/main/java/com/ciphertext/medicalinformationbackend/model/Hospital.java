@@ -1,10 +1,9 @@
 package com.ciphertext.medicalinformationbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import jakarta.persistence.*;
 
-import javax.persistence.*;
 
 /**
  * @author Sadman
