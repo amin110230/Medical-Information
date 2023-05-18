@@ -89,7 +89,12 @@ The field of medicine is constantly evolving, with new research, treatments, and
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Features
+**Doctor Directory:** Access a comprehensive list of doctors, including their specialties, qualifications, and contact information. The doctor directory allows users to search and find medical professionals based on their specific requirements.
 
+**Hospital Database:** Explore a curated database of hospitals and medical facilities, including information such as location, services offered, contact details, and ratings. Users can search for hospitals based on location or specific medical services required.
+
+**Information Search:** Utilize a powerful search functionality to find specific medical information, articles, research papers, or guidelines within the repository. The search feature enables users to quickly locate relevant resources based on keywords or specific topics of interest.
 
 ### Built With
 
