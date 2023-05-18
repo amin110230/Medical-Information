@@ -102,6 +102,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
+* [![Java][Java]][Java-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
@@ -264,3 +265,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Java]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Java-url]: https://www.java.com/
