@@ -51,6 +51,12 @@ databaseChangeLog:
               - column:
                   name: url
                   type: varchar(500)
+              - column:
+                  name: lat
+                  type: varchar(100)
+              - column:
+                  name: lon
+                  type: varchar(100)
             tableName: hospital
         - addForeignKeyConstraint:
             baseColumnNames: district_id
