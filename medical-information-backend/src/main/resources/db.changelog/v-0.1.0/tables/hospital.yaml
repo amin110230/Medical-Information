@@ -72,3 +72,13 @@ databaseChangeLog:
             referencedColumnNames: id
             referencedTableName: upazila
             validate: true
+        - addForeignKeyConstraint:
+            baseColumnNames: union_id
+            baseTableName: hospital
+            constraintName: hospital_fk_union
+            deferrable: false
+            initiallyDeferred: false
+            onUpdate: CASCADE
+            referencedColumnNames: id
+            referencedTableName: union
+            validate: true
