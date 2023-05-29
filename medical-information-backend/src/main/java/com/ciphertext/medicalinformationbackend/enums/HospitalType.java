@@ -12,6 +12,7 @@ public enum HospitalType {
     KIDNEY("কিডনি"),
     LEPROSY("কুষ্ঠ"),
     MENTAL("মানসিক"),
+    TUBERCULOSIS("যক্ষ্মা"),
     MOTHER_AND_CHILD("মা ও শিশু"),
     SPECIALIZED("বিশেষায়িত"),
     TRAUMA("ট্রমা"),
