@@ -9,6 +9,9 @@ databaseChangeLog:
       file: tables/division.yaml
       relativeToChangelogFile: true
   - include:
+      file: tables/doctor.yaml
+      relativeToChangelogFile: true
+  - include:
       file: tables/institution.yaml
       relativeToChangelogFile: true
   - include:
