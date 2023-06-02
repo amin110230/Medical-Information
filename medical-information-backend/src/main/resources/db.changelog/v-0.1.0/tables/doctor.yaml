@@ -46,7 +46,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: start_date
-                  type: timestamp
+                  type: date
               - column:
                   constraints:
                     nullable: false

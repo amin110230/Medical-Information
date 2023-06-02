@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 /**
  * @author Sadman
  */
@@ -15,14 +17,13 @@ import jakarta.persistence.*;
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "district_id")
-    private District district;
+    private Long id;
 
     @Column(name="name")
     private String name;
+
+    @Column(name="bn_name")
+    private String bnName;
 
     @Column(name="bmdc_no")
     private String bmdcNo;
@@ -36,8 +37,8 @@ public class Doctor {
     @Column(name="address")
     private String address;
 
-    @Column(name="started")
-    private int started;
+    @Column(name="start_date")
+    private LocalDate startDate;
 
     @Column(name="description")
     private String description;

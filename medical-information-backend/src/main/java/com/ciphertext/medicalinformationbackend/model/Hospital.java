@@ -11,7 +11,7 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="hospitals")
+@Table(name="hospital")
 public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
