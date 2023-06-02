@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: dc669747-93ff-4429-8daf-b5111cbd8715
+      id: d52dbc8a-bc4b-43f3-8f17-30fa3ed092e4
       author: sadman
       changes:
         - createTable:
@@ -9,85 +9,73 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: doctor_id_pk
+                    primaryKeyName: doctor_degree_id_pk
                   name: id
                   type: bigserial
               - column:
                   constraints:
                     nullable: false
-                  name: name
+                  name: doctor_id
+                  type: int8
+              - column:
+                  constraints:
+                    nullable: false
+                  name: degree_id
+                  type: int4
+              - column:
+                  name: speciality
                   type: varchar(100)
               - column:
                   constraints:
                     nullable: false
-                  name: bn_name
-                  type: varchar(100)
-              - column:
-                  constraints:
-                    nullable: false
-                  name: bmdc_no
-                  type: varchar(100)
-              - column:
-                  name: phone
-                  type: varchar(100)
-              - column:
-                  name: email
-                  type: varchar(100)
-              - column:
-                  name: address
-                  type: varchar(512)
+                  name: institution_id
+                  type: int4
               - column:
                   name: start_date
                   type: date
               - column:
-                  name: district_id
-                  type: int4
+                  name: end_date
+                  type: date
               - column:
-                  name: upazila_id
-                  type: int4
-              - column:
-                  name: union_id
-                  type: int4
-              - column:
-                  name: photo
-                  type: bytea
+                  name: grade
+                  type: varchar(50)
               - column:
                   name: description
-                  type: varchar(1000)
+                  type: varchar(250)
               - column:
                   constraints:
                     nullable: false
                   name: is_active
                   type: boolean
                   defaultValueBoolean: true
-            tableName: doctor
+            tableName: doctor_degree
         - addForeignKeyConstraint:
-            baseColumnNames: district_id
-            baseTableName: doctor
-            constraintName: doctor_fk_district
+            baseColumnNames: doctor_id
+            baseTableName: doctor_degree
+            constraintName: doctor_degree_fk_doctor
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
             referencedColumnNames: id
-            referencedTableName: district
+            referencedTableName: doctor
             validate: true
         - addForeignKeyConstraint:
-            baseColumnNames: upazila_id
-            baseTableName: doctor
-            constraintName: doctor_fk_upazila
+            baseColumnNames: degree_id
+            baseTableName: doctor_degree
+            constraintName: doctor_degree_fk_degree
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
             referencedColumnNames: id
-            referencedTableName: upazila
+            referencedTableName: degree
             validate: true
         - addForeignKeyConstraint:
-            baseColumnNames: union_id
-            baseTableName: doctor
-            constraintName: doctor_fk_union
+            baseColumnNames: institution_id
+            baseTableName: doctor_degree
+            constraintName: doctor_degree_fk_institution
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
             referencedColumnNames: id
-            referencedTableName: union
+            referencedTableName: institution
             validate: true
