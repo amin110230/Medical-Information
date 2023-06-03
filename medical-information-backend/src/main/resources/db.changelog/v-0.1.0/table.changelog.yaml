@@ -15,6 +15,9 @@ databaseChangeLog:
       file: tables/doctor_degree.yaml
       relativeToChangelogFile: true
   - include:
+      file: tables/doctor_schedule.yaml
+      relativeToChangelogFile: true
+  - include:
       file: tables/doctor_workplace.yaml
       relativeToChangelogFile: true
   - include:
