@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: d52dbc8a-bc4b-43f3-8f17-30fa3ed092e4
+      id: 22965105-d3fa-41d8-9bc5-60e77dcd30cb
       author: sadman
       changes:
         - createTable:
@@ -9,7 +9,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: doctor_degree_id_pk
+                    primaryKeyName: doctor_workplace_id_pk
                   name: id
                   type: bigserial
               - column:
@@ -18,17 +18,19 @@ databaseChangeLog:
                   name: doctor_id
                   type: int8
               - column:
-                  constraints:
-                    nullable: false
-                  name: degree_id
-                  type: int4
-              - column:
                   name: medical_speciality_id
                   type: int4
               - column:
-                  constraints:
-                    nullable: false
+                  name: doctor_position
+                  type: varchar(100)
+              - column:
+                  name: teacher_position
+                  type: varchar(100)
+              - column:
                   name: institution_id
+                  type: int4
+              - column:
+                  name: hospital_id
                   type: int4
               - column:
                   name: start_date
@@ -36,23 +38,11 @@ databaseChangeLog:
               - column:
                   name: end_date
                   type: date
-              - column:
-                  name: grade
-                  type: varchar(50)
-              - column:
-                  name: description
-                  type: varchar(250)
-              - column:
-                  constraints:
-                    nullable: false
-                  name: is_active
-                  type: boolean
-                  defaultValueBoolean: true
-            tableName: doctor_degree
+            tableName: doctor_workplace
         - addForeignKeyConstraint:
             baseColumnNames: doctor_id
-            baseTableName: doctor_degree
-            constraintName: doctor_degree_fk_doctor
+            baseTableName: doctor_workplace
+            constraintName: doctor_workplace_fk_doctor
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
@@ -61,8 +51,8 @@ databaseChangeLog:
             validate: true
         - addForeignKeyConstraint:
             baseColumnNames: medical_speciality_id
-            baseTableName: doctor_degree
-            constraintName: doctor_degree_fk_medical_speciality
+            baseTableName: doctor_workplace
+            constraintName: doctor_workplace_fk_medical_speciality
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
@@ -70,22 +60,22 @@ databaseChangeLog:
             referencedTableName: medical_speciality
             validate: true
         - addForeignKeyConstraint:
-            baseColumnNames: degree_id
-            baseTableName: doctor_degree
-            constraintName: doctor_degree_fk_degree
-            deferrable: false
-            initiallyDeferred: false
-            onUpdate: CASCADE
-            referencedColumnNames: id
-            referencedTableName: degree
-            validate: true
-        - addForeignKeyConstraint:
             baseColumnNames: institution_id
-            baseTableName: doctor_degree
-            constraintName: doctor_degree_fk_institution
+            baseTableName: doctor_workplace
+            constraintName: doctor_workplace_fk_institution
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE
             referencedColumnNames: id
             referencedTableName: institution
+            validate: true
+        - addForeignKeyConstraint:
+            baseColumnNames: hospital_id
+            baseTableName: doctor_workplace
+            constraintName: doctor_workplace_fk_hospital
+            deferrable: false
+            initiallyDeferred: false
+            onUpdate: CASCADE
+            referencedColumnNames: id
+            referencedTableName: hospital
             validate: true
