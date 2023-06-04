@@ -19,13 +19,13 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 
-    @Column(name="bn_name")
+    @Column(name="bn_name", nullable = false)
     private String bnName;
 
-    @Column(name="bmdc_no")
+    @Column(name="bmdc_no", nullable = false)
     private String bmdcNo;
 
     @Column(name="phone")

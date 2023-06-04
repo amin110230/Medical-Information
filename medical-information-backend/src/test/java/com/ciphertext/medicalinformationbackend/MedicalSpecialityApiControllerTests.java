@@ -1,7 +1,6 @@
 package com.ciphertext.medicalinformationbackend;
 
-import com.ciphertext.medicalinformationbackend.model.District;
-import com.ciphertext.medicalinformationbackend.model.Speciality;
+import com.ciphertext.medicalinformationbackend.model.MedicalSpeciality;
 import com.ciphertext.medicalinformationbackend.repository.DistrictRepository;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -17,7 +16,7 @@ import org.springframework.web.client.HttpClientErrorException;
  */
 @SpringBootTest(classes = MedicalInformationBackendApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SpecialityApiControllerTests {
+public class MedicalSpecialityApiControllerTests {
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -52,9 +51,9 @@ public class SpecialityApiControllerTests {
      */
     @Test
     public void testGetSpecialityById() {
-        Speciality speciality = restTemplate.getForObject(getRootUrl() + "/specialities/1", Speciality.class);
-        System.out.println(speciality.getName());
-        Assert.assertNotNull(speciality);
+        MedicalSpeciality medicalSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/1", MedicalSpeciality.class);
+        System.out.println(medicalSpeciality.getName());
+        Assert.assertNotNull(medicalSpeciality);
     }
 
     /**
@@ -62,11 +61,11 @@ public class SpecialityApiControllerTests {
      */
     @Test
     public void testCreateSpeciality() {
-        Speciality speciality = new Speciality();
-        speciality.setName("Test");
-        speciality.setDescription(null);
+        MedicalSpeciality medicalSpeciality = new MedicalSpeciality();
+        medicalSpeciality.setName("Test");
+        medicalSpeciality.setDescription(null);
 
-        ResponseEntity<Speciality> postResponse = restTemplate.postForEntity(getRootUrl() + "/specialities", speciality, Speciality.class);
+        ResponseEntity<MedicalSpeciality> postResponse = restTemplate.postForEntity(getRootUrl() + "/specialities", medicalSpeciality, MedicalSpeciality.class);
         Assert.assertNotNull(postResponse);
         Assert.assertNotNull(postResponse.getBody());
     }
@@ -77,14 +76,14 @@ public class SpecialityApiControllerTests {
     @Test
     public void testUpdateSpeciality() {
         int id = 21;
-        Speciality speciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, Speciality.class);
-        speciality.setName("Tesla");
-        speciality.setDescription(null);
+        MedicalSpeciality medicalSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, MedicalSpeciality.class);
+        medicalSpeciality.setName("Tesla");
+        medicalSpeciality.setDescription(null);
 
-        restTemplate.put(getRootUrl() + "/specialities/edit/" + id, speciality);
+        restTemplate.put(getRootUrl() + "/specialities/edit/" + id, medicalSpeciality);
 
-        Speciality updatedSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, Speciality.class);
-        Assert.assertNotNull(updatedSpeciality);
+        MedicalSpeciality updatedMedicalSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, MedicalSpeciality.class);
+        Assert.assertNotNull(updatedMedicalSpeciality);
     }
 
     /**
@@ -94,14 +93,14 @@ public class SpecialityApiControllerTests {
     @Test
     public void testDeleteSpeciality() {
         int id = 21;
-        Speciality speciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, Speciality.class);
-        Assert.assertNotNull(speciality);
+        MedicalSpeciality medicalSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, MedicalSpeciality.class);
+        Assert.assertNotNull(medicalSpeciality);
 
         restTemplate.delete(getRootUrl() + "/specialities/delete/" + id);
 
         try {
-            speciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, Speciality.class);
-            System.out.println(speciality.getName());
+            medicalSpeciality = restTemplate.getForObject(getRootUrl() + "/specialities/" + id, MedicalSpeciality.class);
+            System.out.println(medicalSpeciality.getName());
         } catch (final HttpClientErrorException e) {
             Assert.assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }

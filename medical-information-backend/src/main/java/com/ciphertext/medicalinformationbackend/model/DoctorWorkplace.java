@@ -26,7 +26,7 @@ public class DoctorWorkplace {
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "speciality_id")
-    private Speciality speciality;
+    private MedicalSpeciality medicalSpeciality;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "institution_id")

@@ -1,6 +1,5 @@
 package com.ciphertext.medicalinformationbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,7 +28,7 @@ public class DoctorDegree {
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "speciality_id")
-    private Speciality speciality;
+    private MedicalSpeciality medicalSpeciality;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "institution_id")

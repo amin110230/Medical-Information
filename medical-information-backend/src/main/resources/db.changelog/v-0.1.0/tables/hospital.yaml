@@ -49,14 +49,14 @@ databaseChangeLog:
                   name: organization_type
                   type: varchar(50)
               - column:
-                  name: url
-                  type: varchar(500)
-              - column:
                   name: lat
                   type: varchar(100)
               - column:
                   name: lon
                   type: varchar(100)
+              - column:
+                  name: url
+                  type: varchar(500)
             tableName: hospital
         - addForeignKeyConstraint:
             baseColumnNames: district_id

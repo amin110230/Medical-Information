@@ -1,5 +1,7 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import com.ciphertext.medicalinformationbackend.enums.HospitalType;
+import com.ciphertext.medicalinformationbackend.enums.OrganizationType;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
@@ -17,17 +19,41 @@ public class Hospital {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 
+    @Column(name="bn_name", nullable = false)
+    private String bnName;
+
+    @Column(name="number_of_bed", nullable = false)
+    private Integer numberOfBed;
+
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "district_id")
+    @JoinColumn(name = "district_id", nullable = false)
     private District district;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "type_id")
-    private Type type;
+    @JoinColumn(name = "upazila_id")
+    private Upazila upazila;
 
-    @Column(name="number_of_bed")
-    private int numberOfBed;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "union_id")
+    private Union union;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "hospital_type", nullable = false)
+    private HospitalType hospitalType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "organization_type", nullable = false)
+    private OrganizationType organizationType;
+
+    @Column(name="lat", nullable = false)
+    private String lat;
+
+    @Column(name="lon", nullable = false)
+    private String lon;
+
+    @Column(name="url", nullable = false)
+    private String url;
 }

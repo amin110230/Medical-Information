@@ -2,7 +2,7 @@ package com.ciphertext.medicalinformationbackend.service;
 
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.SpecialityService;
-import com.ciphertext.medicalinformationbackend.model.Speciality;
+import com.ciphertext.medicalinformationbackend.model.MedicalSpeciality;
 import com.ciphertext.medicalinformationbackend.repository.SpecialityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,31 +20,31 @@ public class SpecialityServiceImpl implements SpecialityService {
     SpecialityRepository specialityRepository;
 
     @Override
-    public List<Speciality> getAllSpecialities() {
+    public List<MedicalSpeciality> getAllSpecialities() {
         return specialityRepository.findAll();
     }
 
     @Override
-    public Speciality getSpecialityById(int id) throws RecordNotFoundException {
+    public MedicalSpeciality getSpecialityById(int id) throws RecordNotFoundException {
         return specialityRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
     }
 
     @Override
-    public Speciality createSpeciality(Speciality speciality) {
-        return specialityRepository.save(speciality);
+    public MedicalSpeciality createSpeciality(MedicalSpeciality medicalSpeciality) {
+        return specialityRepository.save(medicalSpeciality);
     }
 
     @Override
-    public Speciality updateSpeciality(Speciality newSpeciality, int specialityId) {
+    public MedicalSpeciality updateSpeciality(MedicalSpeciality newMedicalSpeciality, int specialityId) {
         return specialityRepository.findById(specialityId)
                 .map(speciality -> {
-                    speciality.setName(newSpeciality.getName());
-                    speciality.setDescription(newSpeciality.getDescription());
+                    speciality.setName(newMedicalSpeciality.getName());
+                    speciality.setDescription(newMedicalSpeciality.getDescription());
                     return specialityRepository.save(speciality);
                 })
                 .orElseGet(() -> {
-                    newSpeciality.setId(specialityId);
-                    return specialityRepository.save(newSpeciality);
+                    newMedicalSpeciality.setId(specialityId);
+                    return specialityRepository.save(newMedicalSpeciality);
                 });
     }
 

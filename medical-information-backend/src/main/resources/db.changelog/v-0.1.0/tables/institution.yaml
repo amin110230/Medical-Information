@@ -13,8 +13,6 @@ databaseChangeLog:
                   name: id
                   type: serial
               - column:
-                  constraints:
-                    nullable: false
                   name: acronym
                   type: varchar(10)
               - column:
@@ -28,8 +26,6 @@ databaseChangeLog:
                   name: bn_name
                   type: varchar(100)
               - column:
-                  constraints:
-                    nullable: false
                   name: established_year
                   type: int4
               - column:
@@ -45,13 +41,19 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: institution_type
+                  name: hospital_type
                   type: varchar(50)
               - column:
                   constraints:
                     nullable: false
                   name: organization_type
                   type: varchar(50)
+              - column:
+                  name: lat
+                  type: varchar(100)
+              - column:
+                  name: lon
+                  type: varchar(100)
               - column:
                   name: url
                   type: varchar(500)

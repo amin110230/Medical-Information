@@ -1,9 +1,11 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import com.ciphertext.medicalinformationbackend.enums.HospitalType;
+import com.ciphertext.medicalinformationbackend.enums.OrganizationType;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author Sadman
@@ -11,38 +13,45 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="institutions")
+@Table(name="institution")
 public class Institution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="name")
-    private String name;
-
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "district_id")
-    private District district;
-
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "type_id")
-    private Type type;
-
     @Column(name="acronym")
     private String acronym;
 
-    @Column(name="university")
-    private String university;
+    @Column(name="name", nullable = false)
+    private String name;
 
-    @Column(name="established")
-    private int established;
+    @Column(name="bn_name", nullable = false)
+    private String bnName;
 
-    @Column(name="started")
-    private int started;
+    @Column(name="established_year")
+    private Integer establishedYear;
 
     @Column(name="enroll")
-    private int enroll;
+    private Integer enroll;
 
-    @Column(name="url")
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "district_id")
+    private District district;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "hospital_type", nullable = false)
+    private HospitalType hospitalType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "organization_type", nullable = false)
+    private OrganizationType organizationType;
+
+    @Column(name="lat", nullable = false)
+    private String lat;
+
+    @Column(name="lon", nullable = false)
+    private String lon;
+
+    @Column(name="url", nullable = false)
     private String url;
 }
