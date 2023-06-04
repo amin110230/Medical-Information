@@ -3,7 +3,7 @@ package com.ciphertext.medicalinformationbackend.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author Sadman
@@ -11,22 +11,22 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="upazilas")
+@Table(name="upazila")
 public class Upazila {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "district_id")
+    @JoinColumn(name = "district_id", nullable = false)
     private District district;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 
-    @Column(name="bn_name")
+    @Column(name="bn_name", nullable = false)
     private String bnName;
 
-    @Column(name="url")
+    @Column(name="url", nullable = false)
     private String url;
 }

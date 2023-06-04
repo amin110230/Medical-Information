@@ -32,7 +32,7 @@ databaseChangeLog:
         - addForeignKeyConstraint:
             baseColumnNames: doctor_workplace_id
             baseTableName: doctor_schedule
-            constraintName: doctor_schedule_fk_doctor_schedule
+            constraintName: doctor_schedule_fk_doctor_workplace
             deferrable: false
             initiallyDeferred: false
             onUpdate: CASCADE

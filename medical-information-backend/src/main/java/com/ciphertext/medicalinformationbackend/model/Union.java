@@ -1,9 +1,8 @@
 package com.ciphertext.medicalinformationbackend.model;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import jakarta.persistence.*;
 
 /**
  * @author Sadman
@@ -11,27 +10,21 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="district")
-public class District {
+@Table(name="union")
+public class Union {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "division_id", nullable = false)
-    private Division division;
+    @JoinColumn(name = "upazila_id", nullable = false)
+    private Upazila upazila;
 
     @Column(name="name", nullable = false)
     private String name;
 
     @Column(name="bn_name", nullable = false)
     private String bnName;
-
-    @Column(name="lat", nullable = false)
-    private String lat;
-
-    @Column(name="lon", nullable = false)
-    private String lon;
 
     @Column(name="url", nullable = false)
     private String url;

@@ -16,12 +16,12 @@ public class Division {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 
-    @Column(name="bn_name")
+    @Column(name="bn_name", nullable = false)
     private String bnName;
 
-    @Column(name="url")
+    @Column(name="url", nullable = false)
     private String url;
 }

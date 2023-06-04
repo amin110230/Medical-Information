@@ -2,7 +2,6 @@ package com.ciphertext.medicalinformationbackend.service;
 
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.TypeService;
-import com.ciphertext.medicalinformationbackend.model.Type;
 import com.ciphertext.medicalinformationbackend.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
