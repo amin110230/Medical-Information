@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author Sadman
  */
-public interface SpecialityService {
+public interface MedicalSpecialityService {
     List<MedicalSpeciality> getAllSpecialities();
     MedicalSpeciality getSpecialityById(int id) throws RecordNotFoundException;
     MedicalSpeciality createSpeciality(MedicalSpeciality medicalSpeciality);

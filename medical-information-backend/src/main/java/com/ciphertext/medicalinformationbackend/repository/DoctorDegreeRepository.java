@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @author Sadman
  */
 @Repository
-public interface DoctorDegreeRepository extends JpaRepository<DoctorDegree, Integer> {
+public interface DoctorDegreeRepository extends JpaRepository<DoctorDegree, Long> {
 }

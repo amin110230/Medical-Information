@@ -14,6 +14,10 @@ public class RecordNotFoundException extends Exception {
         super(String.valueOf(id));
     }
 
+    public RecordNotFoundException(long id) {
+        super(String.valueOf(id));
+    }
+
     public RecordNotFoundException(String message) {
         super(message);
     }

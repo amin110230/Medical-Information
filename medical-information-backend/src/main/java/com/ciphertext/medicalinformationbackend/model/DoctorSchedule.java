@@ -1,12 +1,13 @@
 package com.ciphertext.medicalinformationbackend.model;
 
 import com.ciphertext.medicalinformationbackend.enums.DaysOfWeek;
-import com.ciphertext.medicalinformationbackend.enums.DegreeType;
+import com.ciphertext.medicalinformationbackend.enums.OrganizationType;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import jakarta.persistence.*;
-import java.util.Date;
+import java.sql.Time;
+
 
 /**
  * @author Sadman
@@ -14,23 +15,23 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name="time_slot")
-public class TimeSlot {
+@Table(name="doctor_schedule")
+public class DoctorSchedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "doctor_workplace_id")
     private DoctorWorkplace doctorWorkplace;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "degree_type")
+    @Column(name = "day", nullable = false)
     private DaysOfWeek daysOfWeek;
 
-    @Column(name = "start_datetime")
-    private Date startDateTime;
+    @Column(name="start_time", nullable = false)
+    private Time startTime;
 
-    @Column(name = "end_datetime")
-    private Date endDateTime;
+    @Column(name="end_time", nullable = false)
+    private Time endTime;
 }

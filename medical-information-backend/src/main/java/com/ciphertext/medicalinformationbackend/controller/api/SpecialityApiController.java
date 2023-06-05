@@ -1,7 +1,7 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
-import com.ciphertext.medicalinformationbackend.iservice.SpecialityService;
+import com.ciphertext.medicalinformationbackend.iservice.MedicalSpecialityService;
 import com.ciphertext.medicalinformationbackend.model.MedicalSpeciality;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class SpecialityApiController {
     @Autowired
-    SpecialityService service;
+    MedicalSpecialityService service;
 
     @GetMapping("/specialities")
     public List<MedicalSpeciality> getAllSpecialities(Model model) {
