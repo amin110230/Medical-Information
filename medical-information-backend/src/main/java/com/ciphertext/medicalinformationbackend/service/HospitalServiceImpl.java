@@ -34,8 +34,7 @@ public class HospitalServiceImpl implements HospitalService {
             HospitalDTO hospitalDTO = new HospitalDTO();
             hospitalDTO.setId(hospital.getId());
             hospitalDTO.setName(hospital.getName());
-            hospitalDTO.setDistrict(hospital.getDistrict().getName());
-            hospitalDTO.setType(hospital.getType().getName());
+            hospitalDTO.setDistrict(hospital.getDistrict());
             hospitalDTO.setNumberOfBed(hospital.getNumberOfBed());
             hospitalDTOS.add(hospitalDTO);
         }

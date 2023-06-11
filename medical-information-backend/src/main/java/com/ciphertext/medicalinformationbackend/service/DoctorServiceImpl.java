@@ -38,7 +38,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public Doctor getDoctorById(int id) throws RecordNotFoundException {
+    public Doctor getDoctorById(Long id) throws RecordNotFoundException {
         return doctorRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
     }
 }

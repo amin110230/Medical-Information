@@ -34,7 +34,7 @@ public class DoctorApiController {
     }
 
     @GetMapping("/doctors/{id}")
-    public ResponseEntity<Doctor> getDoctorById(@PathVariable(value = "id") int doctorId)
+    public ResponseEntity<Doctor> getDoctorById(@PathVariable(value = "id") Long doctorId)
             throws RecordNotFoundException {
         Doctor doctor = service.getDoctorById(doctorId);
         return ResponseEntity.ok().body(doctor);

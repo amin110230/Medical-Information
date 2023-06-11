@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DoctorDTO {
-    private int id;
+    private Long id;
     private String name;
     private int yearOfExperience;
     private String specialities;

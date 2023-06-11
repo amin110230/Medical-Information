@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface DoctorWorkplaceService {
     List<DoctorWorkplace> getAllDoctorWorkplaces();
-    DoctorWorkplace getDoctorWorkplaceById(int id) throws RecordNotFoundException;
+    DoctorWorkplace getDoctorWorkplaceById(Long id) throws RecordNotFoundException;
 }
