@@ -1,7 +1,6 @@
 package com.ciphertext.medicalinformationbackend.model;
 
 import com.ciphertext.medicalinformationbackend.enums.DaysOfWeek;
-import com.ciphertext.medicalinformationbackend.enums.OrganizationType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
