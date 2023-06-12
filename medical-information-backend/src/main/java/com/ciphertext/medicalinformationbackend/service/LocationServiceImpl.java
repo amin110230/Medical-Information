@@ -4,9 +4,11 @@ import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundExceptio
 import com.ciphertext.medicalinformationbackend.iservice.LocationService;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
+import com.ciphertext.medicalinformationbackend.model.Union;
 import com.ciphertext.medicalinformationbackend.model.Upazila;
 import com.ciphertext.medicalinformationbackend.repository.DistrictRepository;
 import com.ciphertext.medicalinformationbackend.repository.DivisionRepository;
+import com.ciphertext.medicalinformationbackend.repository.UnionRepository;
 import com.ciphertext.medicalinformationbackend.repository.UpazilaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +29,9 @@ public class LocationServiceImpl implements LocationService {
 
     @Autowired
     UpazilaRepository upazilaRepository;
+
+    @Autowired
+    UnionRepository unionRepository;
 
     @Override
     public List<Division> getAllDivisions() {
@@ -68,5 +73,11 @@ public class LocationServiceImpl implements LocationService {
     public List<Upazila> getAllUpazilasByDistrictId(int districtId) throws RecordNotFoundException {
         District district = getDistrictById(districtId);
         return upazilaRepository.getAllByDistrict(district);
+    }
+
+    @Override
+    public List<Union> getAllUnionsByUpazilaId(int upazilaId) throws RecordNotFoundException {
+        Upazila upazila = getUpazilaById(upazilaId);
+        return unionRepository.getAllByUpazila(upazila);
     }
 }

@@ -4,6 +4,7 @@ import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundExceptio
 import com.ciphertext.medicalinformationbackend.iservice.LocationService;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
+import com.ciphertext.medicalinformationbackend.model.Union;
 import com.ciphertext.medicalinformationbackend.model.Upazila;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -68,5 +69,10 @@ public class LocationApiController {
             throws RecordNotFoundException {
         Upazila upazila = service.getUpazilaById(upazilaId);
         return ResponseEntity.ok().body(upazila);
+    }
+
+    @GetMapping("/upazilas/{id}/unions")
+    public List<Union> getAllUnionByUpazilaId(@PathVariable(value = "id") int upazilaId) throws RecordNotFoundException {
+        return service.getAllUnionsByUpazilaId(upazilaId);
     }
 }

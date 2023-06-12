@@ -3,6 +3,7 @@ package com.ciphertext.medicalinformationbackend.iservice;
 import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
+import com.ciphertext.medicalinformationbackend.model.Union;
 import com.ciphertext.medicalinformationbackend.model.Upazila;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -20,4 +21,6 @@ public interface LocationService {
     List<Upazila> getAllUpazilas();
     Upazila getUpazilaById(int id) throws RecordNotFoundException;
     List<Upazila> getAllUpazilasByDistrictId(int districtId) throws RecordNotFoundException;
+
+    List<Union> getAllUnionsByUpazilaId(int upazilaId) throws RecordNotFoundException;
 }
