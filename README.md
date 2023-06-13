@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][db-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 The field of medicine is constantly evolving, with new research, treatments, and guidelines being published regularly. The Medical-Information repository serves as a central hub for curated medical information, covering a wide range of topics, specialties, and domains. Our goal is to empower users with accurate, evidence-based information to enhance their understanding and decision-making in the medical field.
 
