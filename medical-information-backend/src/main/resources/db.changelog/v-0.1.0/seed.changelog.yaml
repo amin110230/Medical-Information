@@ -9,9 +9,9 @@ databaseChangeLog:
             tableName: degree
             quotchar: '"'
         - loadData:
-            file: seeds/district.csv
+            file: seeds/medical_speciality.csv
             relativeToChangelogFile: true
-            tableName: district
+            tableName: medical_speciality
             quotchar: '"'
         - loadData:
             file: seeds/division.csv
@@ -19,17 +19,17 @@ databaseChangeLog:
             tableName: division
             quotchar: '"'
         - loadData:
-            file: seeds/medical_speciality.csv
+            file: seeds/district.csv
             relativeToChangelogFile: true
-            tableName: medical_speciality
-            quotchar: '"'
-        - loadData:
-            file: seeds/union.csv
-            relativeToChangelogFile: true
-            tableName: union
+            tableName: district
             quotchar: '"'
         - loadData:
             file: seeds/upazila.csv
             relativeToChangelogFile: true
             tableName: upazila
+            quotchar: '"'
+        - loadData:
+            file: seeds/union.csv
+            relativeToChangelogFile: true
+            tableName: union
             quotchar: '"'

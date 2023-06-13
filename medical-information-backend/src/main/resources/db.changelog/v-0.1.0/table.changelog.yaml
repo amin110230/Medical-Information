@@ -3,22 +3,19 @@ databaseChangeLog:
       file: tables/degree.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/district.yaml
+      file: tables/medical_speciality.yaml
       relativeToChangelogFile: true
   - include:
       file: tables/division.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/doctor.yaml
+      file: tables/district.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/doctor_degree.yaml
+      file: tables/upazila.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/doctor_schedule.yaml
-      relativeToChangelogFile: true
-  - include:
-      file: tables/doctor_workplace.yaml
+      file: tables/union.yaml
       relativeToChangelogFile: true
   - include:
       file: tables/hospital.yaml
@@ -27,11 +24,14 @@ databaseChangeLog:
       file: tables/institution.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/medical_speciality.yaml
+      file: tables/doctor.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/union.yaml
+      file: tables/doctor_degree.yaml
       relativeToChangelogFile: true
   - include:
-      file: tables/upazila.yaml
+      file: tables/doctor_workplace.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: tables/doctor_schedule.yaml
       relativeToChangelogFile: true
