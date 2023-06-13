@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][db-screenshot]](https://example.com)
 
 The field of medicine is constantly evolving, with new research, treatments, and guidelines being published regularly. The Medical-Information repository serves as a central hub for curated medical information, covering a wide range of topics, specialties, and domains. Our goal is to empower users with accurate, evidence-based information to enhance their understanding and decision-making in the medical field.
 
@@ -95,6 +95,10 @@ The field of medicine is constantly evolving, with new research, treatments, and
 **Hospital Database:** Explore a curated database of hospitals and medical facilities, including information such as location, services offered, contact details, and ratings. Users can search for hospitals based on location or specific medical services required.
 
 **Information Search:** Utilize a powerful search functionality to find specific medical information, articles, research papers, or guidelines within the repository. The search feature enables users to quickly locate relevant resources based on keywords or specific topics of interest.
+
+### Database
+
+[![Database Diagram][db-screenshot]](https://dbdiagram.io/d/6488b6bf722eb77494e72192)
 
 ### Built With
 
@@ -248,6 +252,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+[db-screenshot]: images/db-diagram.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
