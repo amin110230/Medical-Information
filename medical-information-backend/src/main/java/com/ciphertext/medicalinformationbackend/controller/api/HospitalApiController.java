@@ -1,7 +1,7 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
 import com.ciphertext.medicalinformationbackend.dto.out.HospitalDTO;
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.HospitalService;
 import com.ciphertext.medicalinformationbackend.model.Hospital;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class HospitalApiController {
 
     @GetMapping("/hospitals/{id}")
     public ResponseEntity<Hospital> getHospitalById(@PathVariable(value = "id") int hospitalId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         Hospital hospital = service.getHospitalById(hospitalId);
         return ResponseEntity.ok().body(hospital);
     }

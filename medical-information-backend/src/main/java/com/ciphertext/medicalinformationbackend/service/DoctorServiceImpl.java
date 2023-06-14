@@ -1,7 +1,7 @@
 package com.ciphertext.medicalinformationbackend.service;
 
 import com.ciphertext.medicalinformationbackend.dto.out.DoctorDTO;
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DoctorService;
 import com.ciphertext.medicalinformationbackend.model.Doctor;
 import com.ciphertext.medicalinformationbackend.repository.DoctorRepository;
@@ -38,7 +38,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public Doctor getDoctorById(Long id) throws RecordNotFoundException {
-        return doctorRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Doctor getDoctorById(Long id) throws ResourceNotFoundException {
+        return doctorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Doctor with id = " + id));
     }
 }

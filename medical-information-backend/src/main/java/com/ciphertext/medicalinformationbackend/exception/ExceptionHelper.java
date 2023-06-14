@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.client.HttpClientErrorException;
 
 /**
  * @author Sadman
@@ -16,8 +15,8 @@ public class ExceptionHelper {
 
     private static final Logger logger = LoggerFactory.getLogger(ExceptionHelper.class);
 
-    @ExceptionHandler(value = {RecordNotFoundException.class})
-    public ResponseEntity<Object> handleInvalidInputException(RecordNotFoundException ex) {
+    @ExceptionHandler(value = {ResourceNotFoundException.class})
+    public ResponseEntity<Object> handleInvalidInputException(ResourceNotFoundException ex) {
         logger.error("Record Not Found Exception: ", ex.getMessage());
         return new ResponseEntity<Object>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }

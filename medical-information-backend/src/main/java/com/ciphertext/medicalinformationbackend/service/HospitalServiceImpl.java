@@ -1,19 +1,14 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.dto.out.DoctorDTO;
 import com.ciphertext.medicalinformationbackend.dto.out.HospitalDTO;
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.HospitalService;
-import com.ciphertext.medicalinformationbackend.model.Doctor;
 import com.ciphertext.medicalinformationbackend.model.Hospital;
 import com.ciphertext.medicalinformationbackend.repository.HospitalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,8 +37,8 @@ public class HospitalServiceImpl implements HospitalService {
     }
 
     @Override
-    public Hospital getHospitalById(int id) throws RecordNotFoundException {
-        return hospitalRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Hospital getHospitalById(int id) throws ResourceNotFoundException {
+        return hospitalRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Hospital with id = " + id));
     }
 
     @Override

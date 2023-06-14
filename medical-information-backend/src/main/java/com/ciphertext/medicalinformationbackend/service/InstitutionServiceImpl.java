@@ -1,8 +1,7 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.InstitutionService;
-import com.ciphertext.medicalinformationbackend.model.Division;
 import com.ciphertext.medicalinformationbackend.model.Institution;
 import com.ciphertext.medicalinformationbackend.repository.InstitutionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,7 @@ public class InstitutionServiceImpl implements InstitutionService {
     }
 
     @Override
-    public Institution getInstitutionById(int id) throws RecordNotFoundException {
-        return institutionRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Institution getInstitutionById(int id) throws ResourceNotFoundException {
+        return institutionRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Institution with id = " + id));
     }
 }

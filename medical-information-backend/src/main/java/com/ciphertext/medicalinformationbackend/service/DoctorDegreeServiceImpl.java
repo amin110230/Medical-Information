@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DegreeService;
 import com.ciphertext.medicalinformationbackend.model.Degree;
 import com.ciphertext.medicalinformationbackend.repository.DegreeRepository;
@@ -24,7 +24,7 @@ public class DoctorDegreeServiceImpl implements DegreeService {
     }
 
     @Override
-    public Degree getDegreeById(int id) throws RecordNotFoundException {
-        return degreeRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Degree getDegreeById(int id) throws ResourceNotFoundException {
+        return degreeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
     }
 }

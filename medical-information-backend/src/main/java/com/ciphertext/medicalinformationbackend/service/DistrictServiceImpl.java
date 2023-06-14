@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DistrictService;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.repository.DistrictRepository;
@@ -25,7 +25,7 @@ public class DistrictServiceImpl implements DistrictService {
     }
 
     @Override
-    public District getDistrictById(int id) throws RecordNotFoundException {
-        return DistrictRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public District getDistrictById(int id) throws ResourceNotFoundException {
+        return DistrictRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found District with id = " + id));
     }
 }

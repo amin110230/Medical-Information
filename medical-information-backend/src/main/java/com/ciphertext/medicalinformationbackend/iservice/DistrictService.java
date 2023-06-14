@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.iservice;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.District;
 
 import java.util.List;
@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface DistrictService {
     List<District> getAllDistricts();
-    District getDistrictById(int id) throws RecordNotFoundException;
+    District getDistrictById(int id) throws ResourceNotFoundException;
 }

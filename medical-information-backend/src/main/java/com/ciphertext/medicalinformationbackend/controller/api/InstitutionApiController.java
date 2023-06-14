@@ -1,10 +1,7 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.InstitutionService;
-import com.ciphertext.medicalinformationbackend.iservice.LocationService;
-import com.ciphertext.medicalinformationbackend.model.District;
-import com.ciphertext.medicalinformationbackend.model.Division;
 import com.ciphertext.medicalinformationbackend.model.Institution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +29,7 @@ public class InstitutionApiController {
 
     @GetMapping("/institutions/{id}")
     public ResponseEntity<Institution> getDivisionById(@PathVariable(value = "id") int institutionId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         Institution institution = service.getInstitutionById(institutionId);
         return ResponseEntity.ok().body(institution);
     }

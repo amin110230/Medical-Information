@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.LocationService;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
@@ -39,8 +39,8 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public Division getDivisionById(int id) throws RecordNotFoundException {
-        return divisionRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Division getDivisionById(int id) throws ResourceNotFoundException {
+        return divisionRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Division with id = " + id));
     }
 
     @Override
@@ -49,12 +49,12 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public District getDistrictById(int id) throws RecordNotFoundException {
-        return districtRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public District getDistrictById(int id) throws ResourceNotFoundException {
+        return districtRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found District with id = " + id));
     }
 
     @Override
-    public List<District> getAllDistrictsByDivisionId(int divisionId) throws RecordNotFoundException {
+    public List<District> getAllDistrictsByDivisionId(int divisionId) throws ResourceNotFoundException {
         Division division = getDivisionById(divisionId);
         return districtRepository.getAllByDivision(division);
     }
@@ -65,18 +65,18 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public Upazila getUpazilaById(int id) throws RecordNotFoundException {
-        return upazilaRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public Upazila getUpazilaById(int id) throws ResourceNotFoundException {
+        return upazilaRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Upazila with id = " + id));
     }
 
     @Override
-    public List<Upazila> getAllUpazilasByDistrictId(int districtId) throws RecordNotFoundException {
+    public List<Upazila> getAllUpazilasByDistrictId(int districtId) throws ResourceNotFoundException {
         District district = getDistrictById(districtId);
         return upazilaRepository.getAllByDistrict(district);
     }
 
     @Override
-    public List<Union> getAllUnionsByUpazilaId(int upazilaId) throws RecordNotFoundException {
+    public List<Union> getAllUnionsByUpazilaId(int upazilaId) throws ResourceNotFoundException {
         Upazila upazila = getUpazilaById(upazilaId);
         return unionRepository.getAllByUpazila(upazila);
     }

@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.iservice;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.Degree;
 
 import java.util.List;
@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface DegreeService {
     List<Degree> getAllDegrees();
-    Degree getDegreeById(int id) throws RecordNotFoundException;
+    Degree getDegreeById(int id) throws ResourceNotFoundException;
 }

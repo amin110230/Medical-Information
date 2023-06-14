@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DoctorWorkplaceService;
 import com.ciphertext.medicalinformationbackend.model.DoctorWorkplace;
 import com.ciphertext.medicalinformationbackend.repository.DoctorWorkplaceRepository;
@@ -24,7 +24,7 @@ public class DoctorWorkplaceServiceImpl implements DoctorWorkplaceService {
     }
 
     @Override
-    public DoctorWorkplace getDoctorWorkplaceById(Long id) throws RecordNotFoundException {
-        return doctorWorkplaceRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public DoctorWorkplace getDoctorWorkplaceById(Long id) throws ResourceNotFoundException {
+        return doctorWorkplaceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found DoctorWorkplace with id = " + id));
     }
 }

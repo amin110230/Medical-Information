@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.MedicalSpecialityService;
 import com.ciphertext.medicalinformationbackend.model.MedicalSpeciality;
 import com.ciphertext.medicalinformationbackend.repository.MedicalSpecialityRepository;
@@ -25,8 +25,8 @@ public class MedicalMedicalSpecialityServiceImpl implements MedicalSpecialitySer
     }
 
     @Override
-    public MedicalSpeciality getSpecialityById(int id) throws RecordNotFoundException {
-        return medicalSpecialityRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public MedicalSpeciality getSpecialityById(int id) throws ResourceNotFoundException {
+        return medicalSpecialityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     @Override

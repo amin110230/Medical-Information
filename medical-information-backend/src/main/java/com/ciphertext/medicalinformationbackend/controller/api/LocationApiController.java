@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.LocationService;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
@@ -32,13 +32,13 @@ public class LocationApiController {
 
     @GetMapping("/divisions/{id}")
     public ResponseEntity<Division> getDivisionById(@PathVariable(value = "id") int divisionId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         Division division = service.getDivisionById(divisionId);
         return ResponseEntity.ok().body(division);
     }
 
     @GetMapping("/divisions/{id}/districts")
-    public List<District> getAllDistrictsByDivisionId(@PathVariable(value = "id") int divisionId) throws RecordNotFoundException {
+    public List<District> getAllDistrictsByDivisionId(@PathVariable(value = "id") int divisionId) throws ResourceNotFoundException {
         return service.getAllDistrictsByDivisionId(divisionId);
     }
 
@@ -49,13 +49,13 @@ public class LocationApiController {
 
     @GetMapping("/districts/{id}")
     public ResponseEntity<District> getDistrictById(@PathVariable(value = "id") int districtId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         District district = service.getDistrictById(districtId);
         return ResponseEntity.ok().body(district);
     }
 
     @GetMapping("/districts/{id}/upazilas")
-    public List<Upazila> getAllUpazilasByDistrictId(@PathVariable(value = "id") int districtId) throws RecordNotFoundException {
+    public List<Upazila> getAllUpazilasByDistrictId(@PathVariable(value = "id") int districtId) throws ResourceNotFoundException {
         return service.getAllUpazilasByDistrictId(districtId);
     }
 
@@ -66,13 +66,13 @@ public class LocationApiController {
 
     @GetMapping("/upazilas/{id}")
     public ResponseEntity<Upazila> getUpazilaById(@PathVariable(value = "id") int upazilaId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         Upazila upazila = service.getUpazilaById(upazilaId);
         return ResponseEntity.ok().body(upazila);
     }
 
     @GetMapping("/upazilas/{id}/unions")
-    public List<Union> getAllUnionByUpazilaId(@PathVariable(value = "id") int upazilaId) throws RecordNotFoundException {
+    public List<Union> getAllUnionByUpazilaId(@PathVariable(value = "id") int upazilaId) throws ResourceNotFoundException {
         return service.getAllUnionsByUpazilaId(upazilaId);
     }
 }

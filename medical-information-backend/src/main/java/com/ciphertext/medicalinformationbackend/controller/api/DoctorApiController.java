@@ -1,7 +1,7 @@
 package com.ciphertext.medicalinformationbackend.controller.api;
 
 import com.ciphertext.medicalinformationbackend.dto.out.DoctorDTO;
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DoctorService;
 import com.ciphertext.medicalinformationbackend.model.Doctor;
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ public class DoctorApiController {
 
     @GetMapping("/doctors/{id}")
     public ResponseEntity<Doctor> getDoctorById(@PathVariable(value = "id") Long doctorId)
-            throws RecordNotFoundException {
+            throws ResourceNotFoundException {
         Doctor doctor = service.getDoctorById(doctorId);
         return ResponseEntity.ok().body(doctor);
     }

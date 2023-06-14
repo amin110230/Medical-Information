@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.service;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.iservice.DoctorScheduleService;
 import com.ciphertext.medicalinformationbackend.model.DoctorSchedule;
 import com.ciphertext.medicalinformationbackend.repository.DoctorScheduleRepository;
@@ -24,7 +24,7 @@ public class DoctorScheduleServiceImpl implements DoctorScheduleService {
     }
 
     @Override
-    public DoctorSchedule getDoctorScheduleById(Long id) throws RecordNotFoundException {
-        return DoctorScheduleRepository.findById(id).orElseThrow(() -> new RecordNotFoundException(id));
+    public DoctorSchedule getDoctorScheduleById(Long id) throws ResourceNotFoundException {
+        return DoctorScheduleRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found DoctorSchedule with id = " + id));
     }
 }

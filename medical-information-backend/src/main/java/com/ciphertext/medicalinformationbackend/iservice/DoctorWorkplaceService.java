@@ -1,6 +1,6 @@
 package com.ciphertext.medicalinformationbackend.iservice;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.DoctorWorkplace;
 
 import java.util.List;
@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface DoctorWorkplaceService {
     List<DoctorWorkplace> getAllDoctorWorkplaces();
-    DoctorWorkplace getDoctorWorkplaceById(Long id) throws RecordNotFoundException;
+    DoctorWorkplace getDoctorWorkplaceById(Long id) throws ResourceNotFoundException;
 }

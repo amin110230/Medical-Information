@@ -1,11 +1,10 @@
 package com.ciphertext.medicalinformationbackend.iservice;
 
-import com.ciphertext.medicalinformationbackend.exception.RecordNotFoundException;
+import com.ciphertext.medicalinformationbackend.exception.ResourceNotFoundException;
 import com.ciphertext.medicalinformationbackend.model.District;
 import com.ciphertext.medicalinformationbackend.model.Division;
 import com.ciphertext.medicalinformationbackend.model.Union;
 import com.ciphertext.medicalinformationbackend.model.Upazila;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -14,13 +13,13 @@ import java.util.List;
  */
 public interface LocationService {
     List<Division> getAllDivisions();
-    Division getDivisionById(int id) throws RecordNotFoundException;
+    Division getDivisionById(int id) throws ResourceNotFoundException;
     List<District> getAllDistricts();
-    District getDistrictById(int id) throws RecordNotFoundException;
-    List<District> getAllDistrictsByDivisionId(int divisionId) throws RecordNotFoundException;
+    District getDistrictById(int id) throws ResourceNotFoundException;
+    List<District> getAllDistrictsByDivisionId(int divisionId) throws ResourceNotFoundException;
     List<Upazila> getAllUpazilas();
-    Upazila getUpazilaById(int id) throws RecordNotFoundException;
-    List<Upazila> getAllUpazilasByDistrictId(int districtId) throws RecordNotFoundException;
+    Upazila getUpazilaById(int id) throws ResourceNotFoundException;
+    List<Upazila> getAllUpazilasByDistrictId(int districtId) throws ResourceNotFoundException;
 
-    List<Union> getAllUnionsByUpazilaId(int upazilaId) throws RecordNotFoundException;
+    List<Union> getAllUnionsByUpazilaId(int upazilaId) throws ResourceNotFoundException;
 }
