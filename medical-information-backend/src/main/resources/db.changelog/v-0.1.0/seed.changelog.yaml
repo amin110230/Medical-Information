@@ -33,3 +33,8 @@ databaseChangeLog:
             relativeToChangelogFile: true
             tableName: union
             quotchar: '"'
+        - loadData:
+            file: seeds/institution.csv
+            relativeToChangelogFile: true
+            tableName: institution
+            quotchar: '"'
