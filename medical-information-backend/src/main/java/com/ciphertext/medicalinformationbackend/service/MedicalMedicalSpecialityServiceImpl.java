@@ -26,7 +26,7 @@ public class MedicalMedicalSpecialityServiceImpl implements MedicalSpecialitySer
 
     @Override
     public MedicalSpeciality getSpecialityById(int id) throws ResourceNotFoundException {
-        return medicalSpecialityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
+        return medicalSpecialityRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Medical Speciality with id = " + id));
     }
 
     @Override

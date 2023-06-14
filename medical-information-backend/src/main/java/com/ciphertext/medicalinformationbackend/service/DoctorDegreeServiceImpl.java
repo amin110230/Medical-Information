@@ -25,6 +25,6 @@ public class DoctorDegreeServiceImpl implements DegreeService {
 
     @Override
     public Degree getDegreeById(int id) throws ResourceNotFoundException {
-        return degreeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
+        return degreeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Degree with id = " + id));
     }
 }
