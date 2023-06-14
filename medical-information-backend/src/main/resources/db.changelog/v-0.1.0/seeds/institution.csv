@@ -1,6 +1,6 @@
 id,acronym,name,bn_name,established_year,enroll,district_id,hospital_type,organization_type
 1,DMC,Dhaka Medical College,ঢাকা মেডিকেল কলেজ,1946,230,47,COLLEGE,GOVERNMENT
-2,SSMC,Sir Salimullah Medical College,সির সালিমুল্লাহ মেডিকেল কলেজ,1875,230,47,COLLEGE,GOVERNMENT
+2,SSMC,Sir Salimullah Medical College,স্যার সালিমুল্লাহ মেডিকেল কলেজ,1875,230,47,COLLEGE,GOVERNMENT
 3,ShSMC,Shaheed Suhrawardy Medical College,শহীদ সোহরাওয়ার্দী মেডিকেল কলেজ,2006,200,47,COLLEGE,GOVERNMENT
 4,MMC,Mymensingh Medical College,ময়মনসিংহ মেডিকেল কলেজ,1924,230,62,COLLEGE,GOVERNMENT
 5,CMC,Chattogram Medical College,চট্টগ্রাম মেডিকেল কলেজ,1927,230,8,COLLEGE,GOVERNMENT
@@ -76,7 +76,7 @@ id,acronym,name,bn_name,established_year,enroll,district_id,hospital_type,organi
 75,RCMC,Rangpur Community Medical College,রংপুর কমিউনিটি মেডিকেল কলেজ,2001,125,59,COLLEGE,PRIVATE
 76,DLMC,Delta Medical College,ডেলটা মেডিকেল কলেজ,2006,90,47,COLLEGE,PRIVATE
 77,SMCH,Southern Medical College,সাউথার্ন মেডিকেল কলেজ,2006,95,8,COLLEGE,PRIVATE
-78,AKMMC,Anwer Khan Modern Medical College,আনওয়ার খান মডার্ন মেডিকেল কলেজ,2008,120,47,COLLEGE,PRIVATE
+78,AKMMC,Anwer Khan Modern Medical College,আনোয়ার খান মডার্ন মেডিকেল কলেজ,2008,120,47,COLLEGE,PRIVATE
 79,ASMC,Ad-din Sakina Medical College,আদ-দিন সাকিনা মেডিকেল কলেজ,2012,65,20,COLLEGE,PRIVATE
 80,PMC,Popular Medical College,পপুলার মেডিকেল কলেজ,2010,90,47,COLLEGE,PRIVATE
 81,GMCH,Green Life Medical College,গ্রিন লাইফ মেডিকেল কলেজ,2010,100,47,COLLEGE,PRIVATE
@@ -84,7 +84,7 @@ id,acronym,name,bn_name,established_year,enroll,district_id,hospital_type,organi
 83,NPMC,Northern Private Medical College,নর্থান প্রাইভেট মেডিকেল কলেজ,2001,70,59,COLLEGE,PRIVATE
 84,SWMC,Sylhet Women's Medical College,সিলেট ওয়ামেনস মেডিকেল কলেজ,2005,100,37,COLLEGE,PRIVATE
 85,MoMC,Monno Medical College,মন্নো মেডিকেল কলেজ,2002,80,47,COLLEGE,PRIVATE
-86,MHSMC,MH Samorita Medical College,এম.এইচ সামরিতা মেডিকেল কলেজ,2010,110,47,COLLEGE,PRIVATE
+86,MHSMC,MH Samorita Medical College,এম.এইচ শমরিতা মেডিকেল কলেজ,2010,110,47,COLLEGE,PRIVATE
 87,CiMC,City Medical College,সিটি মেডিকেল কলেজ,2011,80,41,COLLEGE,PRIVATE
 88,MarksMC,Marks Medical College,মার্কস মেডিকেল কলেজ,2011,70,47,COLLEGE,PRIVATE
 89,DAMC,Diabetic Association Medical College,ডায়াবেটিক এসোসিয়েশন মেডিকেল কলেজ,2010,80,52,COLLEGE,PRIVATE
