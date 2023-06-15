@@ -34,10 +34,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Medical-Information</h3>
+  <h3 align="center">Open-Care</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Empowering communities with free access to medical information for healthier lives!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
