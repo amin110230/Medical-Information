@@ -7,7 +7,7 @@ const Menu = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Medical Information
+          Open Care
         </Typography>
         <Button component={Link} to="/" color="inherit">
           Blog
