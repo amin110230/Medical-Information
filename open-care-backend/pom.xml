@@ -11,7 +11,7 @@
     <groupId>com.ciphertext</groupId>
     <artifactId>open-care-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>medical-information-backend</name>
+    <name>open-care-backend</name>
     <description>Open Care Backend</description>
     <properties>
         <java.version>17</java.version>
