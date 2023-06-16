@@ -2,10 +2,10 @@ id,acronym,name,bn_name,established_year,enroll,district_id,hospital_type,organi
 1,DMC,Dhaka Medical College,ঢাকা মেডিকেল কলেজ,1946,230,47,COLLEGE,GOVERNMENT
 2,SSMC,Sir Salimullah Medical College,স্যার সালিমুল্লাহ মেডিকেল কলেজ,1875,230,47,COLLEGE,GOVERNMENT
 3,ShSMC,Shaheed Suhrawardy Medical College,শহীদ সোহরাওয়ার্দী মেডিকেল কলেজ,2006,200,47,COLLEGE,GOVERNMENT
-4,MMC,Mymensingh Medical College,ময়মনসিংহ মেডিকেল কলেজ,1924,230,62,COLLEGE,GOVERNMENT
+4,MMC,Mymensingh Medical College,ময়মনসিংহ মেডিকেল কলেজ,1924,260,62,COLLEGE,GOVERNMENT
 5,CMC,Chattogram Medical College,চট্টগ্রাম মেডিকেল কলেজ,1927,230,8,COLLEGE,GOVERNMENT
 6,RMC,Rajshahi Medical College,রাজশাহী মেডিকেল কলেজ,1954,230,15,COLLEGE,GOVERNMENT
-7,SOMC,Sylhet MAG Osmani Medical College,সিলেট মগ ওসমানী মেডিকেল কলেজ,1936,230,37,COLLEGE,GOVERNMENT
+7,SOMC,Sylhet MAG Osmani Medical College,সিলেট এম.এ.জি. ওসমানী মেডিকেল কলেজ,1936,230,37,COLLEGE,GOVERNMENT
 8,SBMC,Sher-e-Bangla Medical College,শেরে-বাংলা মেডিকেল কলেজ,1964,230,34,COLLEGE,GOVERNMENT
 9,RpMC,Rangpur Medical College,রংপুর মেডিকেল কলেজ,1970,230,59,COLLEGE,GOVERNMENT
 10,CuMC,Cumilla Medical College,কুমিল্লা মেডিকেল কলেজ,1979,180,1,COLLEGE,GOVERNMENT
