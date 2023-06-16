@@ -6,7 +6,7 @@ id,acronym,name,bn_name,established_year,enroll,district_id,hospital_type,organi
 5,CMC,Chattogram Medical College,চট্টগ্রাম মেডিকেল কলেজ,1927,230,8,COLLEGE,GOVERNMENT
 6,RMC,Rajshahi Medical College,রাজশাহী মেডিকেল কলেজ,1954,230,15,COLLEGE,GOVERNMENT
 7,SOMC,Sylhet MAG Osmani Medical College,সিলেট এম.এ.জি. ওসমানী মেডিকেল কলেজ,1936,230,37,COLLEGE,GOVERNMENT
-8,SBMC,Sher-e-Bangla Medical College,শেরে-বাংলা মেডিকেল কলেজ,1964,230,34,COLLEGE,GOVERNMENT
+8,SBMC,Sher-e-Bangla Medical College,শেরে-বাংলা মেডিকেল কলেজ,1964,220,34,COLLEGE,GOVERNMENT
 9,RpMC,Rangpur Medical College,রংপুর মেডিকেল কলেজ,1970,230,59,COLLEGE,GOVERNMENT
 10,CuMC,Cumilla Medical College,কুমিল্লা মেডিকেল কলেজ,1979,180,1,COLLEGE,GOVERNMENT
 11,KMC,Khulna Medical College,খুলনা মেডিকেল কলেজ,1992,180,27,COLLEGE,GOVERNMENT
